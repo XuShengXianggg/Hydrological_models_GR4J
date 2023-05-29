@@ -1,2 +1,2 @@
-# Hydrological_models_GR4J
-This repository is used to store the implementation of hydrological model DR4J.
+# 水文模型GR4J
+该存储库用于存储水文模型DR4J的实现。
