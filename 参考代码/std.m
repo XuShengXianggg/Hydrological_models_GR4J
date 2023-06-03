@@ -158,11 +158,15 @@ for i = 366:nStep
     count=count+1;
     Q_accum=Q_accum+Qobs_mm(i);
 end
-Q_ave=Q_accum/count;              %计算观测流量平均值
 
+tmp=zeros(nStep,1);
+
+Q_ave=Q_accum/count;              %计算观测流量平均值
 for i = 366:nStep
     Q_diff1=Q_diff1+(Qobs_mm(i)-Q(i))^2;      %计算Nash-Sutcliffe指数分子
+    tmp(i - 366 + 1) = Q_diff1;
     Q_diff2=Q_diff2+(Qobs_mm(i)-Q_ave)^2;     %计算Nash-Sutcliffe指数分母
+
 end
 NSE=1-Q_diff1/Q_diff2;
 
@@ -176,29 +180,3 @@ xlabel('时间（天）');
 ylabel('流量（mm/d）');
 legend('模拟径流量','观测径流量');
 clc;
-
-
-function sh = SH1_CURVE(t,x4)
-    % Function calculates time delay for HU1
-    if t <= 0.0
-        sh=0.0;
-    elseif t < x4
-        sh=(t/x4)^(2.5);
-    elseif t >= x4
-        sh=1.0;
-    end
-end
-
-function sh = SH2_CURVE(t,x4)
-    % Function calculates time delay for HU2
-    if t <= 0.0
-       sh=0.0;
-    elseif t <= x4
-       sh=0.5*(t/x4)^(2.5);
-    elseif t < 2*x4
-       sh=1-0.5*(2-t/x4)^(2.5);
-    elseif t >= 2*x4
-       sh=1.0;
-    end
-end
-
