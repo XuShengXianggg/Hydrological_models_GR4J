@@ -318,7 +318,7 @@ int main()
 	}
 	NSE = 1 - Q_diff1 / Q_diff2;
 	// cout << Q_diff1 << " " << Q_diff2 << endl;
-	cout << NSE << endl;
+	cout << "NSE = " << NSE << endl;
 	ofstream outfile;
 	outfile.open("answer.csv", ios::out | ios::trunc);
 	outfile << "date" << ',' << "ObserveValue" << ',' << "AnalogValue" << endl;
