@@ -4,13 +4,15 @@
 
 ## Branch Description
 
-GR4J分支用于存放模型的相关信息
+GR4J相关材料分支用于存放模型的相关信息
 
 代码分支用于存放C++实现
 
 参考代码分支用于存放MATLAB实现
 
-流域站点信息用于存放
+流域站点信息用于存放10个流域的数据
+
+模型验证存放对于10个流域站点处理信息的模拟与最终结果的图片呈现
 
 ## 参数格式
 
@@ -47,4 +49,27 @@ GR4J分支用于存放模型的相关信息
 | ---- | ---- | ---- |
 | 3.7  | 0.46 | 14.9 |
 | ...  | ...  | ...  |
+
+## 样例测试
+
+模拟纳什效率系数为0.919021
+
+径流量图如下
+
+![](https://github.com/XuShengXianggg/picturebed/blob/main/%E6%A0%B7%E4%BE%8B.png?raw=true)
+
+## 模型验证
+
+| 站点名称                                      | 站点ID  | 观测纳什效率系数 | 模拟纳什效率系数 | 误差率 |
+| --------------------------------------------- | ------- | ---------------- | ---------------- | ------ |
+| Rifle Creek at Fonthill                       | 919005A | 0.841            | 0.84085          | 0.018% |
+| Mannus Creek at Yarramundi                    | 401017  | 0.842            | 0.836553         | 0.647% |
+| Pirron YalloCreek C River at Pirron Yallock   | 234203  | 0.843            | 0.833403         | 1.138% |
+| StHelens Creek at Calen                       | 124002A | 0.844            | 0.833736         | 1.216% |
+| Gibbo River at Gibbo Park                     | 401217  | 0.846            | 0.845524         | 0.056% |
+| Duck River at Scotchtown Road                 | 314214  | 0.847            | 0.847878         | 0.103% |
+| Hellyer River at Guilford Junction            | 312061  | 0.851            | 0.847759         | 0.381% |
+| Coomera River at Army Camp                    | 146010A | 0.853            | 0.852305         | 0.081% |
+| Goulburn River at U/S of Snake Creek Junction | 405263  | 0.875            | 0.87383          | 0.134% |
+| Reid Creek at Dam Site                        | 136006A | 0.875            | 0.874008         | 0.113% |
 
