@@ -299,7 +299,7 @@ int main()
 	// Q_accum: 记录累计径流量
 	// Q_ave: 记录平均径流量
 	// NSE: 记录纳什效率系数
-	for(int i = 366; i <= size; i ++)
+	for(int i = size * 6 / 10; i <= size; i ++)
 	{
 		cnt ++;
 		Q_accum += Qobs_mm[i];
@@ -308,7 +308,7 @@ int main()
 	// 计算观测流量平均值
 	Q_ave = Q_accum / cnt;
 	// cout << Q_ave << endl;
-	for(int i = 366; i <= size; i ++)
+	for(int i = size * 6 / 10; i <= size; i ++)
 	{
 		// 计算Nash-Sutcliffe指数分子
 		Q_diff1 = Q_diff1 + pow(Qobs_mm[i] - Q[i], 2);

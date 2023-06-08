@@ -63,9 +63,9 @@ GR4J相关材料分支用于存放模型的相关信息
 | 站点名称                                      | 站点ID  | 观测纳什效率系数 | 模拟纳什效率系数 | 误差率 |
 | --------------------------------------------- | ------- | ---------------- | ---------------- | ------ |
 | Rifle Creek at Fonthill                       | 919005A | 0.841            | 0.84085          | 0.018% |
-| Mannus Creek at Yarramundi                    | 401017  | 0.842            | 0.836553         | 0.647% |
-| Pirron YalloCreek C River at Pirron Yallock   | 234203  | 0.843            | 0.833403         | 1.138% |
-| StHelens Creek at Calen                       | 124002A | 0.844            | 0.833736         | 1.216% |
+| Mannus Creek at Yarramundi                    | 401017  | 0.842            | 0.843556         | 0.185% |
+| Pirron YalloCreek C River at Pirron Yallock   | 234203  | 0.843            | 0.838799         | 0.498% |
+| StHelens Creek at Calen                       | 124002A | 0.844            | 0.837351         | 0.788% |
 | Gibbo River at Gibbo Park                     | 401217  | 0.846            | 0.845524         | 0.056% |
 | Duck River at Scotchtown Road                 | 314214  | 0.847            | 0.847878         | 0.103% |
 | Hellyer River at Guilford Junction            | 312061  | 0.851            | 0.847759         | 0.381% |
