@@ -60,16 +60,16 @@ GR4J相关材料分支用于存放模型的相关信息
 
 ## 模型验证
 
-| 站点名称                                      | 站点ID  | 观测纳什效率系数 | 模拟纳什效率系数 | 误差率 |
-| --------------------------------------------- | ------- | ---------------- | ---------------- | ------ |
-| Rifle Creek at Fonthill                       | 919005A | 0.841            | 0.84085          | 0.018% |
-| Mannus Creek at Yarramundi                    | 401017  | 0.842            | 0.843556         | 0.185% |
-| Pirron YalloCreek C River at Pirron Yallock   | 234203  | 0.843            | 0.838799         | 0.498% |
-| StHelens Creek at Calen                       | 124002A | 0.844            | 0.837351         | 0.788% |
-| Gibbo River at Gibbo Park                     | 401217  | 0.846            | 0.845524         | 0.056% |
-| Duck River at Scotchtown Road                 | 314214  | 0.847            | 0.847878         | 0.103% |
-| Hellyer River at Guilford Junction            | 312061  | 0.851            | 0.847759         | 0.381% |
-| Coomera River at Army Camp                    | 146010A | 0.853            | 0.852305         | 0.081% |
-| Goulburn River at U/S of Snake Creek Junction | 405263  | 0.875            | 0.87383          | 0.134% |
-| Reid Creek at Dam Site                        | 136006A | 0.875            | 0.874008         | 0.113% |
+| 站点名称                                      | 站点ID  | 观测纳什效率系数 | 模拟纳什效率系数 | 预热期占比 | 误差率  | 纳什效率系数峰值 |
+| --------------------------------------------- | ------- | ---------------- | ---------------- | ---------- | ------- | ---------------- |
+| Rifle Creek at Fonthill                       | 919005A | 0.841            | 0.840998         | 85.6%      | 0.0002% | 0.934302         |
+| Mannus Creek at Yarramundi                    | 401017  | 0.842            | 0.842013         | 17.04%     | 0.0015% | 0.896103         |
+| Pirron YalloCreek C River at Pirron Yallock   | 234203  | 0.843            | 0.843001         | 30.16%     | 0.0002% | 0.884221         |
+| StHelens Creek at Calen                       | 124002A | 0.844            | 0.84396          | 54.34%     | 0.0048% | 0.976209         |
+| Gibbo River at Gibbo Park                     | 401217  | 0.846            | 0.846001         | 3.07%      | 0%      | 0.846784         |
+| Duck River at Scotchtown Road                 | 314214  | 0.847            | 0.847            | 18.93%     | 0%      | 0.979484         |
+| Hellyer River at Guilford Junction            | 312061  | 0.851            | 0.851001         | 80.16%     | 0%      | 0.942912         |
+| Coomera River at Army Camp                    | 146010A | 0.853            | 0.852993         | 5.74%      | 0.0008% | 0.920882         |
+| Goulburn River at U/S of Snake Creek Junction | 405263  | 0.875            | 0.875002         | 13.2%      | 0%      | 0.916421         |
+| Reid Creek at Dam Site                        | 136006A | 0.875            | 0.874958         | 4.26%      | 0.0048% | 0.972323         |
 

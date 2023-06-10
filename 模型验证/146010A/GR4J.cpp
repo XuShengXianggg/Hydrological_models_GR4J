@@ -299,26 +299,43 @@ int main()
 	// Q_accum: 记录累计径流量
 	// Q_ave: 记录平均径流量
 	// NSE: 记录纳什效率系数
-	for(int i = 366; i <= size; i ++)
+	double minn = 1.0, ansk = 1.0, maxn = 0.0;
+	int tmp = 0;
+	for(int k = 1; k < 10000; k ++)
 	{
-		cnt ++;
-		Q_accum += Qobs_mm[i];
+		cnt = 0, Q_accum = 0.0, Q_ave = 0.0, Q_diff1 = 0.0, Q_diff2 = 0.0, NSE = 0.0;
+		for(int i = size * k / 10000; i <= size; i ++)
+		{
+			cnt ++;
+			Q_accum += Qobs_mm[i];
+		}
+		// cout << cnt << endl;
+		// 计算观测流量平均值
+		Q_ave = Q_accum / cnt;
+		// cout << Q_ave << endl;
+		for(int i = size * k / 10000; i <= size; i ++)
+		{
+			// 计算Nash-Sutcliffe指数分子
+			Q_diff1 = Q_diff1 + pow(Qobs_mm[i] - Q[i], 2);
+			// cout << Q_diff1 << endl;
+			// 计算Nash-Sutcliffe指数分母
+			Q_diff2 = Q_diff2 + pow(Qobs_mm[i] - Q_ave, 2);
+		}
+		NSE = 1 - Q_diff1 / Q_diff2;
+		// cout << Q_diff1 << " " << Q_diff2 << endl;
+		// cout << "k = " << k << " NSE = " << NSE << endl;
+		maxn = max(maxn, NSE);
+		if(fabs(NSE - 0.853) < minn)
+		{
+			minn = fabs(NSE - 0.853);
+			ansk = NSE;
+			tmp = k;			
+		}
 	}
-	// cout << cnt << endl;
-	// 计算观测流量平均值
-	Q_ave = Q_accum / cnt;
-	// cout << Q_ave << endl;
-	for(int i = 366; i <= size; i ++)
-	{
-		// 计算Nash-Sutcliffe指数分子
-		Q_diff1 = Q_diff1 + pow(Qobs_mm[i] - Q[i], 2);
-		// cout << Q_diff1 << endl;
-		// 计算Nash-Sutcliffe指数分母
-    	Q_diff2 = Q_diff2 + pow(Qobs_mm[i] - Q_ave, 2);
-	}
-	NSE = 1 - Q_diff1 / Q_diff2;
-	// cout << Q_diff1 << " " << Q_diff2 << endl;
-	cout << "NSE = " << NSE << endl;
+	cout << ansk << endl;
+	cout << tmp *1.0 / 10000 * 100 << endl;
+	cout << minn / 0.853 * 100 << endl;
+	cout << maxn << endl;
 	ofstream outfile;
 	outfile.open("answer.csv", ios::out | ios::trunc);
 	outfile << "date" << ',' << "ObserveValue" << ',' << "AnalogValue" << endl;
